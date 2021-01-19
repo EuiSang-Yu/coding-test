@@ -20,7 +20,7 @@ public class Bluemoon_Q2 {
 			for(j=i+1; j<5; j++) {
 				//compareTo a<b 이면 음수리턴 아스키코드
 				
-				if(str[i].compareTo(str[j]) < 0) {
+				if(str[i].compareTo(str[j]) < 0) { // str[i] 가 더 작으면 
 					temp = str[i];
 					str[i] = str[j];
 					str[j] = temp;

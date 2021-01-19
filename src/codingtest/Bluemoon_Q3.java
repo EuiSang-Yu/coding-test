@@ -6,6 +6,8 @@ public class Bluemoon_Q3 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		// 1부터 50까지 2의배수만 곱한 총 합 구하기
 
 		BigInteger big = new BigInteger("1");
 		
