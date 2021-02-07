@@ -5,3 +5,4 @@
 
 ### Algorithm
 * Java
+* Javascript
