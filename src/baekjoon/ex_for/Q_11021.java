@@ -13,23 +13,33 @@ public class Q_11021 {
 		// TODO Auto-generated method stub
 
 		/*
-		 * 문제 자연수 N이 주어졌을 때, N부터 1까지 한 줄에 하나씩 출력하는 프로그램을 작성하시오.
+		 * 문제 두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.
 		 * 
-		 * 입력 첫째 줄에 100,000보다 작거나 같은 자연수 N이 주어진다.
+		 * 입력 첫째 줄에 테스트 케이스의 개수 T가 주어진다.
 		 * 
-		 * 출력 첫째 줄부터 N번째 줄 까지 차례대로 출력한다.
+		 * 각 테스트 케이스는 한 줄로 이루어져 있으며, 각 줄에 A와 B가 주어진다. (0 < A, B < 10)
 		 * 
-		 * 예제 입력 1 5 예제 출력 1 5 4 3 2 1
+		 * 출력 각 테스트 케이스마다 "Case #x: "를 출력한 다음, A+B를 출력한다. 테스트 케이스 번호는 1부터 시작한다.
+		 * 
+		 * 예제 입력 1 5 1 1 2 3 3 4 9 8 5 2 예제 출력 1 Case #1: 2 Case #2: 5 Case #3: 7 Case
+		 * #4: 17 Case #5: 7
 		 * 
 		 */
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String str = br.readLine();
-		int N = Integer.parseInt(str);
+		int T = Integer.parseInt(str);
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		ArrayList<Integer> arrlist = new ArrayList<Integer>();
 
-		for (int i = N; i >= 1; i--) {
-			bw.append(i + "\n");
+		for (int i = 0; i < T; i++) {
+			String[] temp = br.readLine().split(" ");
+			int A = Integer.parseInt(temp[0]);
+			int B = Integer.parseInt(temp[1]);
+			arrlist.add(A + B);
+		}
+		for (int i = 0; i < arrlist.size(); i++) {
+			bw.append("Case #" + (i + 1) + ": " + arrlist.get(i) + "\n");
 		}
 
 		br.close();
