@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
+import java.util.Map;
 
 public class Q_11022 {
 
@@ -31,15 +32,17 @@ public class Q_11022 {
 		int T = Integer.parseInt(str);
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		ArrayList<Integer> arrlist = new ArrayList<Integer>();
+		ArrayList<String> arrString = new ArrayList<String>();
 
 		for (int i = 0; i < T; i++) {
 			String[] temp = br.readLine().split(" ");
 			int A = Integer.parseInt(temp[0]);
 			int B = Integer.parseInt(temp[1]);
 			arrlist.add(A + B);
+			arrString.add(A + " + " + B);
 		}
 		for (int i = 0; i < arrlist.size(); i++) {
-			bw.append("Case #" + (i + 1) + ": " + arrlist.get(i) + "\n");
+			bw.append("Case #" + (i + 1) + ": " + arrString.get(i) + " = " + arrlist.get(i) + "\n");
 		}
 
 		br.close();
