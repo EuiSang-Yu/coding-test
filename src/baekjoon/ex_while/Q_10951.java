@@ -1,4 +1,4 @@
-package baekjoon.ex_for;
+package baekjoon.ex_while;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -6,8 +6,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
+import java.util.Scanner;
 
-public class Q_10952 {
+public class Q_10951 {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
@@ -19,27 +20,19 @@ public class Q_10952 {
 		 * 
 		 * 각 테스트 케이스는 한 줄로 이루어져 있으며, 각 줄에 A와 B가 주어진다. (0 < A, B < 10)
 		 * 
-		 * 입력의 마지막에는 0 두 개가 들어온다.
-		 * 
 		 * 출력 각 테스트 케이스마다 A+B를 출력한다.
 		 * 
-		 * 예제 입력 1 1 1 2 3 3 4 9 8 5 2 0 0 예제 출력 1 2 5 7 17 7
+		 * 예제 입력 1 1 1 2 3 3 4 9 8 5 2 예제 출력 1 2 5 7 17 7
 		 */
 
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int A = 1, B = 1;
-		while (true) {
-			String str = br.readLine();
-			A = Integer.parseInt(str.split(" ")[0]);
-			B = Integer.parseInt(str.split(" ")[1]);
-			if (A != 0 && B != 0) {
-				System.out.println(A + B);
-			} else if (A == 0 && B == 0) {
-				break;
-			}
-		}
+		Scanner sc = new Scanner(System.in);
+		while (sc.hasNextInt()) {
+			int a = sc.nextInt();
+			int b = sc.nextInt();
 
-		br.close();
+			System.out.println(a + b);
+		}
+		sc.close();
 	}
 
 }

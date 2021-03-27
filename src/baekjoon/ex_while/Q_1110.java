@@ -1,4 +1,4 @@
-package baekjoon.ex_for;
+package baekjoon.ex_while;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
