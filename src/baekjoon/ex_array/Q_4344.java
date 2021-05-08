@@ -33,7 +33,6 @@ public class Q_4344 {
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		String str = br.readLine();
 		int C = Integer.parseInt(str);
-		List<String> result = new ArrayList<String>(); // 결과값
 		List<String> arr = new ArrayList<String>(); // 모든 입력값
 		for (int i = 0; i < C; i++) {
 			// bw.append(i + "\n");
